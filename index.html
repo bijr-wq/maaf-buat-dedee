@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>For Dede Nisaa 💙</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&family=Dancing+Script:wght@700&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    background:linear-gradient(to bottom,#0f172a,#1e40af,#60a5fa);
+    min-height:100vh;
+    overflow-x:hidden;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    padding:30px 15px;
+    font-family:'Poppins', sans-serif;
+}
+
+.container{
+    text-align:center;
+    position:relative;
+    width:100%;
+    max-width:380px;
+}
+
+.title{
+    color:white;
+    font-size:52px;
+    margin-bottom:10px;
+    font-family:'Dancing Script', cursive;
+}
+
+.subtitle{
+    color:#dbeafe;
+    margin-bottom:25px;
+    font-size:18px;
+    font-weight:300;
+}
+
+.bouquet{
+    position:relative;
+    margin:auto;
+}
+
+.bunga{
+    width:120px;
+    display:block;
+    margin:0 auto -25px auto;
+    position:relative;
+    z-index:5;
+    animation:float 3s ease-in-out infinite;
+}
+
+.card{
+    background:rgba(255,255,255,0.96);
+    backdrop-filter:blur(10px);
+    border-radius:28px;
+    padding:22px;
+    box-shadow:0 15px 35px rgba(0,0,0,0.3);
+    position:relative;
+}
+
+.card::before,
+.card::after{
+    content:"";
+    position:absolute;
+    width:25px;
+    height:25px;
+    border:4px solid #60a5fa;
+}
+
+.card::before{
+    top:15px;
+    left:15px;
+    border-right:none;
+    border-bottom:none;
+}
+
+.card::after{
+    bottom:15px;
+    right:15px;
+    border-left:none;
+    border-top:none;
+}
+
+.photo{
+    width:100%;
+    border-radius:18px;
+    margin-bottom:18px;
+    border:4px solid #bfdbfe;
+}
+
+.to{
+    color:#2563eb;
+    margin-bottom:15px;
+    font-size:24px;
+    font-family:'Dancing Script', cursive;
+}
+
+.message{
+    color:#334155;
+    line-height:1.9;
+    font-size:15px;
+    font-weight:400;
+}
+
+.from{
+    margin-top:20px;
+    color:#2563eb;
+    font-family:'Dancing Script', cursive;
+    font-size:24px;
+}
+
+.tap{
+    margin-top:20px;
+    color:#dbeafe;
+    font-size:15px;
+    font-weight:300;
+}
+
+audio{
+    margin-top:20px;
+    width:100%;
+}
+
+.heart{
+    position:fixed;
+    top:-20px;
+    color:#bfdbfe;
+    animation:fall linear forwards;
+    z-index:999;
+}
+
+@keyframes float{
+    0%{
+        transform:translateY(0px);
+    }
+    50%{
+        transform:translateY(-10px);
+    }
+    100%{
+        transform:translateY(0px);
+    }
+}
+
+@keyframes fall{
+    to{
+        transform:translateY(110vh);
+        opacity:0;
+    }
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+<div class="title">
+A apologize for you!
+</div>
+
+<div class="subtitle">
+abidzar jelek made this for dede nisaa 💙
+</div>
+
+<div class="bouquet">
+
+<img src="bunga.png" class="bunga">
+
+<div class="card">
+
+<img src="foto-kalian.jpg" class="photo">
+
+<div class="to">
+To: dede nisaa 💙
+</div>
+
+<div class="message">
+sayangg, bubu minta maaff yaaa🥺<br>
+bubu tauu bubu salah.<br>
+bubu janjii gabakal ngulangin itu lagii.<br>
+bubu janji sama bubu sendirii.<br>
+kan dede gasuka janji janjii.<br><br>
+
+sekali lagi maafinn bubu yaa sayangg ❤️‍🩹<br><br>
+
+aku gak mau kehilangan kamu.<br>
+kalau disitu ada salahku,<br>
+maafinn aku ya sayang 💙
+</div>
+
+<div class="from">
+With love, abidzar jelek
+</div>
+
+<audio controls autoplay loop>
+<source src="lagu.mp3" type="audio/mpeg">
+</audio>
+
+</div>
+
+<div class="tap">
+Tap card to expand
+</div>
+
+</div>
+
+</div>
+
+<script>
+
+function createHeart(){
+
+    const heart = document.createElement("div");
+
+    heart.classList.add("heart");
+
+    heart.innerHTML = "💙";
+
+    heart.style.left = Math.random() * 100 + "vw";
+
+    heart.style.fontSize = Math.random() * 20 + 15 + "px";
+
+    heart.style.animationDuration = Math.random() * 3 + 2 + "s";
+
+    document.body.appendChild(heart);
+
+    setTimeout(()=>{
+        heart.remove();
+    },5000);
+}
+
+setInterval(createHeart,300);
+
+</script>
+
+</body>
+</html>
